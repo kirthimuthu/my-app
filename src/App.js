@@ -11,8 +11,7 @@ function App() {
   const handleLoginSubmit = (event) => {
     event.preventDefault();
     setIsLoggedIn(true);
-  };
-
+  }
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
   };
