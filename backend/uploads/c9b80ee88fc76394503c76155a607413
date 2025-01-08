@@ -1,0 +1,233 @@
+<html>
+  <head>
+    <style>
+      h2 {
+        color: aqua;
+      }
+
+      .paragraph {
+        font-size: 20px;
+        color: chocolate;
+      }
+
+      #paragraph1 {
+        font-size: 30px;
+        color: cornflowerblue;
+      }
+    </style>
+    <link rel="stylesheet" href="hello.css">
+  </head>
+  <body>
+    <!--Heading tags-->
+    <h1 style="color: brown;">Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <!--Paragraph tag-->
+    <p class="paragraph">paragraph tag</p>
+
+    <strong>paragraph tag</strong>
+
+    <em>italic tag</em>
+
+    <!--Anchor tag-->
+    <a
+      target="_blank"
+      href="https://en.wikipedia.org/wiki/Indian_mathematics#Styles_of_memorisation"
+      >Link</a
+    >
+    <!--Span tag - Inline organisation-->
+    <p id="paragraph1">
+      Lorem <span><strong>ipsum </strong></span>dolor sit amet consectetur
+      adipisicing elit. Culpa, accusantium fugiat quas distinctio repellat
+      reprehenderit saepe ullam corporis suscipit sed impedit vitae architecto
+      ratione harum nulla officiis.
+      <span
+        ><em><a href="#">Magnam,</a></em></span
+      >
+      laboriosam ad. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Culpa, accusantium fugiat quas distinctio repellat reprehenderit saepe
+      ullam corporis suscipit sed impedit vitae architecto ratione harum nulla
+      officiis. Magnam, laboriosam ad.
+    </p>
+
+    <!--Multimedia tags- img, audio, video-->
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Domestic_fire_altar.jpg/300px-Domestic_fire_altar.jpg"
+      alt="image"
+      width="100"
+      height="100"
+    />
+
+    <!-- div tag - block level organisation-->
+    <div class="container">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus culpa
+      tenetur, pariatur recusandae deserunt voluptatum fugit explicabo cum vel
+      cupiditate consequatur, quos laudantium maxime nam ab quaerat, tempora
+      officia provident!
+    </div>
+
+    <main>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nesciunt
+      blanditiis doloremque error sed soluta consequatur tenetur illum, id
+      corporis cumque eum non quia quisquam beatae reprehenderit voluptatibus
+      repellendus molestias!
+    </main>
+
+    <header>
+      itfutfyufyufyuffuftyLorem ipsum, dolor sit amet consectetur adipisicing
+      elit. Corporis blanditiis necessitatibus voluptatibus reprehenderit totam
+      fugiat recusandae impedit nobis ea quas. Facere harum non incidunt fugiat
+      est velit dolore dicta at.
+    </header>
+
+    <div>
+      <div>
+        <div>
+          <img src="" alt="image" />
+        </div>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore vel
+          sint ipsa iste aut, illo sed ducimus quam, eaque praesentium commodi
+          placeat blanditiis voluptatum soluta hic sapiente. Optio, blanditiis
+          alias!
+        </p>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque hic
+        pariatur fugiat consequatur tempore, officia delectus soluta numquam
+        deleniti incidunt, iste iusto quia! Voluptas nobis iste maxime. Magnam,
+        corrupti culpa.
+      </p>
+    </div>
+
+    <!--list tag - ol, ul, dl-->
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <ol>
+        <li>Bootstrap</li>
+        <li>Tailwind</li>
+      </ol>
+      <li>JS</li>
+      <li>React</li>
+      <li>Angular</li>
+    </ul>
+
+    <dl>
+      <dt>HTML</dt>
+      <dd>5</dd>
+      <dt>CSS</dt>
+      <dd>3</dd>
+      <dt>Javascript</dt>
+      <dd>6</dd>
+    </dl>
+
+    <!--Semantic Tags - paragraph, heading, img, audio, video, li, section, main, article, header, footer, aside-->
+    <!--Non Semantic tags - span, div-->
+
+    <!--Table and Form -->
+    <table cellpadding="10" border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Degree</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>25</td>
+          <td>B.E</td>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>25</td>
+          <td>B.E</td>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>25</td>
+          <td>B.E</td>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>25</td>
+          <td>B.E</td>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>25</td>
+          <td>B.E</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <form action="index.html">
+      <div>
+        <label for="name">Name:</label>
+        <input required placeholder="Enter Your Name.." type="text" />
+      </div>
+      <div>
+        <label>Phone Number</label>
+        <input placeholder="Enter Your Mobile Number.." type="number" />
+      </div>
+      <div>
+        <label>Email</label>
+        <input type="email" />
+      </div>
+      <div>
+        <label>Password</label>
+        <input type="password" />
+      </div>
+      <div>
+        <select>
+          <option>Honda</option>
+          <option>Suzuki</option>
+          <option>Hyundai</option>
+          <option>Renault</option>
+          <option>Nissan</option>
+        </select>
+
+        <input list="data" />
+        <datalist id="data">
+            <option>Tamil Nadu</option>
+            <option>Karanataka</option>
+            <option>Andhra Pradesh</option>
+            <option>Goa</option>
+            <option>Kerala</option>
+            <option>Gujarat</option>
+            <option>Assam</option>
+            <option>Sikkim</option>
+        </datalist>
+      </div>
+      <input type="checkbox" />
+      <input type="date" />
+      <button>Submit</button>
+      <input type="submit" value="Submit" />
+    </form>
+
+    <input id="male" type="radio" checked name="gender" value="male" />
+    <label for="male">Male</label>
+
+    <input id="female" type="radio" name="gender" value="female" />
+    <label for="female">Female</label>
+
+    <!-- <audio controls>
+      <source src="file_example_MP3_700KB.mp3" type="audio/mp3" >
+    </audio>
+
+    <video controls>
+      <source src="SampleVideo_1280x720_1mb.mp4" type="video/mp4" >
+    </video> -->
+  </body>
+</html>
+
+<!--HTML 5-->
+<!--CSS - Cascading Style Sheet-->
+
+<!--Types - Inline, Internal, External -->
