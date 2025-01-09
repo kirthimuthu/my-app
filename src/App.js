@@ -7,17 +7,37 @@ function App() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [uploadStatus, setUploadStatus] = useState('');
   const [downloadLink, setDownloadLink] = useState('');
+  const [username, setUsername] = useState(""); // State for username
+  const [password, setPassword] = useState(""); // State for password
 
-  const handleLoginSubmit = (event) => {
+  const handleLoginSubmit = async (event) => {
     event.preventDefault();
-    setIsLoggedIn(true);
-  }
+    try {
+      const response = await axios.post("http://localhost:5000/login", {
+        username_or_email: username,
+        password: password,
+      });
+
+      console.log("Login successful:", response.data);
+      setIsLoggedIn(true);
+      setUploadStatus('');
+    } catch (error) {
+      console.error("Invalid username or password", error);
+      setUploadStatus('Invalid username or password');
+    }
+   
+  } 
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
   };
+  const handleClick = (event) => {
+    setIsLoggedIn(false);
+  }
 
   const handleFileSubmit = async (event) => {
     event.preventDefault();
+
+  
 
   
     if (!selectedFile) {
@@ -50,14 +70,19 @@ function App() {
       
       <div className="login-container">
         <h2>Login</h2>
+      
         <form onSubmit={handleLoginSubmit}>
           <label htmlFor="username">Username</label>
-          <input type="text" id="username" name="username" required />
+          <input type="text" id="username" name="username" value={username}
+            onChange={(e) => setUsername(e.target.value)} // Update state on change
+            required  />
           <div>
             <label htmlFor="password">Password</label>
-            <input type="password" id="password" name="password" required />
+            <input type="password" id="password" name="password"  value={password}
+            onChange={(e) => setPassword(e.target.value)} required />
           </div>
           <button type="submit">Login</button>
+          {uploadStatus && <p>{uploadStatus}</p>}
         </form>
       </div>
     );
@@ -66,7 +91,11 @@ function App() {
   return (
     <div className="app-container">
       <div className="upload-container">
-        <h2>Upload a File</h2>
+        <div style={{display:"flex"}}>
+        <div style={{width:"80%"}}>
+        <h2>Upload a File</h2></div>
+        <div style={{width:"20%"}}>
+        <button onClick={handleClick}>Logout</button></div></div>
         <form onSubmit={handleFileSubmit}>
           <label htmlFor="file">Choose File</label>
           <input type="file" id="file" onChange={handleFileChange} />
